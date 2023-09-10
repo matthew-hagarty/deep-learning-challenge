@@ -1,0 +1,19 @@
+﻿Overview:
+        The purpose of this analysis was to predict future organizations’ ability to use loan and grant money efficiently by using a neural network based off of 34,000+ prior organizations’ histories.
+
+
+Results:
+* Data Preprocessing
+   * Our target variable was the column “IS_SUCCESSFUL” which is whether or not the charity used their grant successfully.
+   * The other variables, such as Application type, Affiliation, and Classification, among others, are the features used for the neural network model.
+   * The EIN and NAME columns were removed from the input data because they are neither categorical nor numerical features for the data and are not our target variable, so they were dropped from the table.
+* Compiling, Training, and Evaluating
+   * For the best model I could achieve (the third model), I did 2 layers of 8 and 5 neurons respectively, with activation functions of ‘relu’ for each.
+   * I was not able to achieve the model target performance, with the closest I could achieve being 72.5% approximately.
+   * I attempted in model 1 to reduce the binning, thinking that the overbinning was part of the problem, though I showed the opposite. In the second model I increased the depth of the model to 3 layers of 6 neurons each, which had almost exactly the same performance as the original model. The third and most accurate model reduced (actually eliminated) the binning and ran for 10x the number of epochs as the other models.
+
+
+Summary:
+        The deep learning model was not able to hit the target after several different attempts and the differences in the model’s accuracy was not very much. I think that a normal, not deep learning network, such as a regular supervised learning model, might work better as there aren’t too many variables and the data set is not particularly too big for such a model.
+
+(Google Doc version of this report: https://docs.google.com/document/d/1M_aPy1j4t1Ipuj6ALTAOLDMchB_LgkBH1CvElKYJ9LE/edit?usp=sharing )
